@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block head_title %}Welcome || {{block.super}}{% endblock head_title %}
+
+{% block something %}
+	<p>this is the "block something" text</p>
+{% endblock something %}
+
+{% block content %}
+<h1>Hello</h1>
+<h3>{{ block.super }}</h3>
+<p>
+	This is {{ html_var }} coming through
+</p>
+<p>
+	{% if rand_num is not None %}
+		Radom number is: {{ rand_num }}
+	{% endif %}
+</p>
+<p>
+	{% for some_item in some_list %}
+
+		{% if some_item|divisibleby:"2" %}
+			Even Number
+		{% endif %}
+
+		{{ some_item }} <br />
+
+	{% endfor %}
+</p>
+{% endblock content %}

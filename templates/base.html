@@ -1,0 +1,23 @@
+<!doctype html> 
+<html lang="en">
+	<head>
+		<title>{% block head_title %}MuyPicky.com{% endblock head_title %}</title>
+		{% include 'snippets/css.html' %}
+	</head>
+	<body>
+
+			{% include 'snippets/nav.html' %}
+
+			<div class="container">
+				{% block content %}
+
+					something... I want this text to show
+				{% endblock content %}	
+
+				{% block something %}
+				{% endblock something %}
+			</div>
+
+	{% include 'snippets/css.html' %}
+	</body>
+</html>
